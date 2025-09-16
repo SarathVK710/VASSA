@@ -12,5 +12,5 @@ Feature: Verify black screen issue
     Then click Place order button
     And again select customer name "<customer>", Quantity "<Quantity>" and Payment mode "<Paymentmode>"
     Examples:
-      |username|password|seller|slot|customer|Quantity|Paymentmode|
-      |admin|12345|Sarath_Distributor|evening|testing (8978098909)|1|Offline|
+      | username | password | seller             | slot    | customer             | Quantity | Paymentmode |
+      | admin    | 12345    | Sarath_Distributor | morning | testing (8978098909) | 1        | Offline     |

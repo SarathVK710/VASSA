@@ -56,16 +56,12 @@ public class PlaceOrderStep {
     public void clickPlaceOrderButton() {
         context.pageObjectManager.getLoginPage().selectPlaceOrderButton();
     }
+
+
     @And("again select customer name {string}, Quantity {string} and Payment mode {string}")
     public void againSelectCustomerNameQuantityAndPaymentMode(String customer, String Quantity, String Paymentmode) {
-//        context.pageObjectManager.getLoginPage().selectCustomerName(customer);
-//        context.pageObjectManager.getLoginPage().selectQuantity(Quantity);
-//        context.pageObjectManager.getLoginPage().select2ndPaymentMode(Paymentmode);
-//        context.pageObjectManager.getLoginPage().selectPlaceOrderButton();
-
         // Record start time
         long startTime = System.currentTimeMillis();
-
         // Run loop until 3 Hours (3 * 60 * 60 * 1000 ms)
         while (System.currentTimeMillis() - startTime < 3 * 60 * 60 * 1000) {
             context.pageObjectManager.getLoginPage().selectCustomerName(customer);
@@ -80,7 +76,28 @@ public class PlaceOrderStep {
                 e.printStackTrace();
             }
         }
-
-
     }
+
+//    @And("again select customer name {string}, Quantity {string} and Payment mode {string}")
+//    public void againSelectCustomerNameQuantityAndPaymentMode(String customer, String Quantity, String Paymentmode) {
+//        // Record start time
+//        long startTime = System.currentTimeMillis();
+//        // Run loop until 2 Hours (2 * 60 * 60 * 1000 ms)
+//        long duration = 2 * 60 * 60 * 1000;
+//
+//        while (System.currentTimeMillis() - startTime < duration) {
+//            context.pageObjectManager.getLoginPage().selectCustomerName(customer);
+//            context.pageObjectManager.getLoginPage().selectQuantity(Quantity);
+//            context.pageObjectManager.getLoginPage().select2ndPaymentMode(Paymentmode);
+//            context.pageObjectManager.getLoginPage().selectPlaceOrderButton();
+//
+//            // Wait 5 minutes before the next click
+//            try {
+//                Thread.sleep( 30 * 1000); // 5 minutes in milliseconds
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//    }
+
 }

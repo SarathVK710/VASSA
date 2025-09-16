@@ -21,7 +21,7 @@ public class LoginPage {
     }
     public void selectSalesDate(){
         driver.findElement(By.xpath("//input[@data-component-name='DatePicker']")).click();
-        driver.findElement(By.xpath("//table[@class='ant-picker-content']/tbody/tr/td[@title='2025-09-15']")).click();
+        driver.findElement(By.xpath("//table[@class='ant-picker-content']/tbody/tr/td[@title='2025-09-16']")).click();
     }
     public void selectSellerName(String seller){
         WebElement sellerName = driver.findElement(By.xpath("//input[@aria-owns='rc_select_3_list']"));

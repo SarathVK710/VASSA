@@ -14,5 +14,4 @@ public class PageObjectManager {
         LoginPage loginpage = new LoginPage(driver);
         return loginpage;
     }
-
 }
